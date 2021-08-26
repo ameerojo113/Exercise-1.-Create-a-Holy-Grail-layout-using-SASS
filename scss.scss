@@ -1,0 +1,91 @@
+$color1: blue;
+$color2: red;
+$color3: green;
+$color4: yellow;
+$color5: pink;
+$bgcolor: black;
+
+body {
+    background-color: $bgcolor;
+
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "section section aside"
+        "footer footer footer";
+    grid-template-rows: 80px 1fr 80px;
+    grid-template-columns: 20% 1fr 20%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+}
+img {
+    max-width: 100px;
+    max-height: 100px;
+}
+.p {
+    text-align: center;
+}
+header {
+    ul {
+        margin: auto;
+        list-style: none;
+        padding: 10px;
+        border: 2px solid lightsalmon;
+        background-color: $color1;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    li {
+        padding-top: 15px;
+        float: right;
+        border-right: 2px solid $color2;
+        &:hover {
+            background-color: $color3;
+        }
+    }
+    a {
+        display: block;
+        padding: 8px 10px;
+        text-decoration: underline;
+
+        &:hover {
+            color: $color4;
+        }
+    }
+    grid-area: header;
+    background-color: $color1;
+}
+
+* {
+    border: 0;
+    margin: 0;
+}
+
+section {
+    grid-area: section;
+    background-color: $color3;
+    padding: 10px;
+    text-align: center;
+    p {
+        padding-top: 300px;
+    }
+}
+
+aside {
+    grid-area: aside;
+    background-color: $color4;
+    padding: 10px;
+    text-align: center;
+    p {
+        padding-top: 300px;
+    }
+}
+
+footer {
+    grid-area: footer;
+    background-color: $color5;
+    padding: 10px;
+}
+

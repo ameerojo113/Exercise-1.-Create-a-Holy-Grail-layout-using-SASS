@@ -1,0 +1,102 @@
+body {
+  background-color: black;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header header" "section section aside" "footer footer footer";
+  -ms-grid-rows: 80px 1fr 80px;
+      grid-template-rows: 80px 1fr 80px;
+  -ms-grid-columns: 20% 1fr 20%;
+      grid-template-columns: 20% 1fr 20%;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+}
+
+img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.p {
+  text-align: center;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  background-color: blue;
+}
+
+header ul {
+  margin: auto;
+  list-style: none;
+  padding: 10px;
+  border: 2px solid lightsalmon;
+  background-color: blue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+header li {
+  padding-top: 15px;
+  float: right;
+  border-right: 2px solid red;
+}
+
+header li:hover {
+  background-color: green;
+}
+
+header a {
+  display: block;
+  padding: 8px 10px;
+  text-decoration: underline;
+}
+
+header a:hover {
+  color: yellow;
+}
+
+* {
+  border: 0;
+  margin: 0;
+}
+
+section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: section;
+  background-color: green;
+  padding: 10px;
+  text-align: center;
+}
+
+section p {
+  padding-top: 300px;
+}
+
+aside {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: aside;
+  background-color: yellow;
+  padding: 10px;
+  text-align: center;
+}
+
+aside p {
+  padding-top: 300px;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  background-color: pink;
+  padding: 10px;
+}
